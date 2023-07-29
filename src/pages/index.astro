@@ -8,17 +8,40 @@ import Layout from '@/layouts/Layout.astro'
 <Layout title="Welcome to Astro.">
   <main class="mx-2 flex flex-col items-center">
     <Title text="Astro + Tailwind + ESLint + Prettier" />
-    <Button id="button-change-theme" className="mt-2 md:mt-4">Change Theme to</Button>
+    <Button id="button-change-theme" className="mt-2 md:mt-4">
+      Change Theme to <span id="text-theme">dark</span>
+    </Button>
   </main>
   <Footer />
 </Layout>
 
+<script is:inline>
+  const text = document.getElementById('text-theme')
+
+  if (text) {
+    const darkModeEnabled = document.documentElement.classList.contains('dark')
+    text.innerText = darkModeEnabled ? 'light' : 'dark'
+  }
+</script>
+
 <script>
-  const button = document.getElementById('')
+  const text = document.getElementById('text-theme')
+  const button = document.getElementById('button-change-theme')
 
   if (button) {
     button.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark')
+      const darkMode = document.documentElement.classList.toggle('dark')
+
+      if (text) {
+        const darkModeEnabled = document.documentElement.classList.contains('dark')
+        text.innerText = darkModeEnabled ? 'light' : 'dark'
+      }
+
+      if (darkMode) {
+        localStorage.setItem('theme', 'dark')
+      } else {
+        localStorage.setItem('theme', 'light')
+      }
     })
   }
 </script>
