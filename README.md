@@ -40,10 +40,10 @@
 
 This starter template contains:
 
-- ⚛️ [Astro](https://astro.build/)
+- ⚛️ [Astro 4](https://astro.build/)
 - 🎐 [Tailwind CSS 3](https://tailwindcss.com/)
 - 💎 [Typescript](https://www.typescriptlang.org/) strongly typed programming language
-- 🪄 [Prettier](https://prettier.io/) — Format your code automatically, this will also run **on save**
+- 🪄 [Prettier 3](https://prettier.io/) — Format your code automatically, this will also run **on save**
 - 🧼 [ESLint](https://eslint.org/) — Find & fix problems in your code, and **removing** your unused variables
 - 🐶 [Husky](https://www.npmjs.com/package/husky) — Git hooks to impreve your commits
 - 📜 [Commit Lint](https://github.com/conventional-changelog/commitlint) — Make sure the commit message follows the conventional commit
@@ -58,7 +58,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                    | Action                                           |
 | :------------------------- | :----------------------------------------------- |
 | `pnpm install`             | Installs dependencies                            |
-| `pnpm run dev`             | Starts local dev server at `localhost:3000`      |
+| `pnpm run dev`             | Starts local dev server at `localhost:4321`      |
 | `pnpm run build`           | Build your production site to `./dist/`          |
 | `pnpm run preview`         | Preview your build locally, before deploying     |
 | `pnpm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
